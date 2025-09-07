@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMATAÇÃO DE STRINGS E NÚEMEROS</title>
+    <style>
+        body{
+            font: normal 20pt  Arial;
+        }
+    </style>
+</head>
+<body>
+
+    <script> /*Exemplo de formatação de Strings em JS*/
+        let nome = window.prompt(`Qual é seu nome ?`)
+        document.write(` Olá <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br>`)/*Aqui mostramos a quantidade de letras que tem a string*/
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br>`)/*Aqui estmos transformando em maiúsculas*/
+        document.write(`Seu nome em minúsculas é ${nome.toLowerCase()}<br>`)/*Aqui em minúsculas*/
+        /*Note que usando a função write, temos como colocar HTML no texto*/
+
+        /*Exemplo de formatação com números*/
+
+        let num1 = 33.5
+        window.alert(`${num1.toFixed(2)}`)//toFixed(2) Transforma um float com 2 casas decimais
+        window.alert(`${num1.toFixed(2).replace('.' , ',')}`)//replace('.' , ',') Troca o ponto, por vírgula
+        /*Técnica para formatar a String no valor da moeda de cada país. VER FUNCIONANDO NO NAVAGADOR*/
+        window.alert(`${num1.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})}`)
+        window.alert(`${num1.toLocaleString('pt-BR' , {style: 'currency' , currency: 'USD'})}`)
+        window.alert(`${num1.toLocaleString('pt-BR' , {style: 'currency' , currency: 'EUR'})}`)
+    </script>
+</body>
+</html>

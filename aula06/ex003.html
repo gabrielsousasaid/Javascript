@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(150, 150, 255);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(179, 179, 55);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo !</h1>
+    <p>Já me livrei da maldição !!</p>
+    <script>
+        let n1 = Number.parseInt(window.prompt('Digite um número: ')) // O prompt trata do dados como String
+        let n2 = Number.parseInt(window.prompt('Digite outro número: '))// Por isso tivemos que utilizar o parseInt para converter os dados para número. Daria também para ser ParseFloat e entre outros
+        let n3 = Number(window.prompt('Digite outro número que será somado com 2 e convertido automatimante seu tipo pela máquina utilizando somente a instrução "Number":'))//Poderíamos também fazer assim, só com nuber. Assim dizemos para a máquina para ela reconhecer os dados e converter automaticamante. Exemplo se for Float ou Int
+        window.alert(n3 + 2 + ' número convertido automaticamente pela máquina')
+        var soma = n1 + n2
+        window.alert('A soma dos valores é ' + String(soma))
+
+        /*Passar número para String. Duas formas:*/
+        soma.toString()
+        String(soma)
+
+        /*Ao invés de Ficarmos colocando vários sinais de + para fazer a contatenação, também podemos fazer simplesmente assim:
+        utilizando crase, ao invés de String*/
+        window.alert(`Eu vou mostrar vários número como esse ${n1} e também esse ${n2} e esse ${n3}`) //${} Se chama placeholder
+    </script>
+</body>
+</html>
