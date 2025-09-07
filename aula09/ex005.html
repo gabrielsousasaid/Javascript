@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(135, 184, 229);
+            color: white;
+            font: normal 18pt Arial
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando estudos com DOM</h1>
+
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        //Exemplo de pegando elementos pela marca:
+
+        let corpo = window.document.body
+        let p1 = window.document.getElementsByTagName('p')[1]/*Aqui estamos pegando o elemento da tag p e armazenando dentro de uma
+        variável. O [0], serve para selecionar o paragrafo desajado por ordem. 0 = primeiro parágrafo/ 1 = Segundo parágrafo. E assim
+        sucetivamente. Isso foi necessário porque o método está no 
+        plural.*/
+
+        window.document.write(`Olá mundo!`) // Aqui adicionamos esse texto na página
+        window.document.write(window.document.charset)/*Exemplo de que podemos buscar algumas configurações e exibi-lás*/
+        window.document.write(window.navigator.appName)// Outro exemplo
+        window.document.write(window.document.URL)/*Exemplo agora buscando a URL*/
+
+        window.document.write('Está escrito assim: ' + p1.innerText)/*Adicionando o texto no documento através dos dados guardados na variável p1*/
+
+        
+        p1.style.color = 'blue' //exemplo de manipulação das CSS em JS
+        corpo.style.background = 'black'//outro exemplo de manipulação
+
+        document.write(p1.innerHTML)/*Aqui se usamos innerHTML ele puxa
+        também as configurações de HTML dentro da tag, diferente do 
+        innerText*/
+        window.alert(p1.innerHTML)//Exemplo acima só que com alerta
+
+
+        //Exemplo de pegando elementos pelo ID:
+
+        let d = window.document.getElementById('msg')
+
+        d.style.background = 'green'//Mais exemplos de manipulação
+        d.innerText = 'Estou aguardando...' /*Mais um exemplo de manipulação, note que sobrescreveu o texto original*/
+
+        /*window.document.GetElementById('msg').innerText = 'Estou aguardando...' Exemplo acima por extenso, sem guardar em uma
+        variável*/
+
+
+        //Exemplo de pagando elementos através do NAME:
+
+        let e = window.document.getElementsByName('msg')[0]/*Como é no plural, tivemos que definir qual elemento através do [0]*/
+
+        //Exemplo de pegando elementos através do seletor:
+
+        let f = window.document.querySelector('div#msg')/*Poria também ser pego através de classe .msg, caso fosse uma classe*/
+
+
+
+    </script>
+</body>
+</html>
