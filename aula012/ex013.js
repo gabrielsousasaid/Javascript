@@ -11,7 +11,7 @@
  */
 console.log(diaSem)
 
-switch(diaSem){
+switch(diaSem){ // Aqui colocamos a expressão que resulta em um valor
     case 0:
         console.log('Domingo')
         break
@@ -19,7 +19,7 @@ switch(diaSem){
         console.log('Segunda')
         break
     case 2:
-        console.log('Terça')
+        console.log('Terça') //De acordo com o valor que deu na expressão, determinamos uma ação ou outra
         break
     case 3:
         console.log('Quarta')
@@ -33,4 +33,7 @@ switch(diaSem){
     case 6:
         console.log('Sábado')
         break
+    default:
+        console.log('[ERRO] Dia inválido!')
+        break//opcional
 }
