@@ -1,3 +1,6 @@
+/*Determinando o estilo do modelo para começar fazer as manipulaçoes
+via algoritmos em JS*/
+
 body{
     background-color: rgb(99, 99, 255);
     font: normal 15pt Arial;
@@ -19,4 +22,8 @@ footer{
     color: white;
     text-align: center;
     font-style: italic;
+}
+div{
+    text-align: center;
+    padding: 8px;
 }
